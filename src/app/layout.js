@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className="bg-gradient-to-br from-gray-800 to-black text-white  "
+        className="bg-gradient-to-br from-gray-800 to-black text-white  scroll-smooth "
       >
 
         <Navbar />
