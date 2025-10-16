@@ -1,4 +1,5 @@
 
+import { Mouse } from "lucide-react";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
@@ -12,12 +13,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-      className="bg-gradient-to-br from-gray-700 to-black text-white"
+        className="bg-gradient-to-br from-gray-800 to-black text-white  "
       >
 
         <Navbar />
         <main>
           {children}
+          <div className="fixed top-[50%] right-5 cursor-pointer animate-pulse">
+            <Mouse size={30} />
+          </div>
         </main>
 
       </body>

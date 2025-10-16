@@ -7,7 +7,7 @@ import Logo from '../Logo/logo'
 
 const MenuIteam = ({onClose}) => {
   return (
-    <div className="mt-4">
+    <div className="mt-2 p-6">
         <div className='flex justify-between items-center my-10'>
            <Logo/>
             <Button variant="outline" >

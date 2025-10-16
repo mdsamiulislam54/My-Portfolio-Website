@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav className={`py-4   absolute inset-0 bg-transparent
-      ${pathname === '/' ? scrollY > 50 ? "fixed-nav bg-white" : "" : scrollY > 50 ? "fixed-nav bg-white" : "bg-white"}
+      ${pathname === '/' ? scrollY > 50 ? "fixed-nav bg-gradient-to-bl to-gray-800 from-black" : "" : scrollY > 50 ? "fixed-nav bg-white" : "bg-white"}
     `}>
       <div className="custom-container ">
         <div className='flex justify-between items-center'>
@@ -53,8 +53,8 @@ const Navbar = () => {
           </div>
           <div className='flex items-center gap-4'>
             
-            <Button variant="outline" onClick={() => alert("Resume Downloaded!")}>
-              Download Resume
+            <Button variant="outline"  onClick={() => alert("Resume Downloaded!")}>
+              Resume
             </Button>
             <Button variant="outline" ref={menuRef} onClick={handleToggleMenu} className={"cursor-pointer"}>
               <MenuIcon />
@@ -69,7 +69,7 @@ const Navbar = () => {
               animate={{ x: 0, opacity: 1 }}
 
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className='fixed right-0 top-0 min-h-screen z-100  bg-white shadow-2xl dark:bg-black  p-4 lg:w-3/12 md:w-5/12 sm:w-7/12 w-10/12'
+              className='fixed right-0 top-0 min-h-screen z-100 bg-gradient-to-tl to-black from-gray-800  shadow-2xl  p-4 lg:w-3/12 md:w-5/12 sm:w-7/12 w-10/12'
             >
               <MenuIteam onClose={handleToggleMenu} />
             </motion.div>
