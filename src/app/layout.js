@@ -1,16 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Md Shamiul Islam",
@@ -21,21 +12,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} `}
-        style={{
-          backgroundImage: `
-        radial-gradient(circle at 50% 50%, 
-          rgba(203, 213, 225, 0.12) 0%, 
-          rgba(203, 213, 225, 0.07) 25%, 
-          rgba(203, 213, 225, 0.03) 35%, 
-          transparent 50%
-        )
-      `,
-          backgroundSize: "100% 100%",
-        }}
+      className="bg-gradient-to-br from-gray-700 to-black text-white"
       >
-        <Navbar/>
-        {children}
+
+        <Navbar />
+        <main>
+          {children}
+        </main>
+
       </body>
     </html>
   );

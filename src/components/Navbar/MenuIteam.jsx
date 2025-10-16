@@ -1,17 +1,49 @@
 import Link from 'next/link'
 import React from 'react'
+import { Home, User, Briefcase, Book, Code, Mail, FileText } from 'lucide-react'
+import { Button } from '../ui/button'
+import { X } from 'lucide-react'
+import Logo from '../Logo/logo'
 
-const MenuIteam = () => {
+const MenuIteam = ({onClose}) => {
   return (
-    <div>
-        <ul>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-        </ul>
+    <div className="mt-4">
+        <div className='flex justify-between items-center my-10'>
+           <Logo/>
+            <Button variant="outline" >
+              <X/>
+            </Button>
+        </div>
+      <ul className="flex flex-col gap-8 syne">
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <Home size={18} />
+          <Link href={"#"}>Home</Link>
+        </li>
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <User size={18} />
+          <Link href={"#"}>About Us</Link>
+        </li>
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <Briefcase size={18} />
+          <Link href={"#"}>Projects</Link>
+        </li>
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <Book size={18} />
+          <Link href={"#"}>Education</Link>
+        </li>
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <Code size={18} />
+          <Link href={"#"}>Skill</Link>
+        </li>
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <Mail size={18} />
+          <Link href={"#"}>Contact Us</Link>
+        </li>
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <FileText size={18} />
+          <Link href={"#"}>My Blogs</Link>
+        </li>
+      </ul>
     </div>
   )
 }
