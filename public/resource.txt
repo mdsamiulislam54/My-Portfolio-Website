@@ -1,0 +1,20 @@
+https://www.hiveart.xyz/perez-bootstrap/light-version/index.html
+
+<div className="min-h-screen w-full bg-slate-950 relative">
+  {/* Moonlight Silver Background */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: `
+        radial-gradient(circle at 50% 50%, 
+          rgba(203, 213, 225, 0.12) 0%, 
+          rgba(203, 213, 225, 0.07) 25%, 
+          rgba(203, 213, 225, 0.03) 35%, 
+          transparent 50%
+        )
+      `,
+      backgroundSize: "100% 100%",
+    }}
+  />
+  {/* Your Content/Components */}
+</div>
