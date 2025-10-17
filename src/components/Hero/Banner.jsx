@@ -4,24 +4,20 @@ import React from 'react'
 import { Button } from '../ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import { Hand } from 'lucide-react'
-import {
-    FileType2,
-    Server,
-    Network,
-    Database
-} from "lucide-react";
+import { Database } from "lucide-react";
 import { RiNextjsLine } from "react-icons/ri";
-import { IoLogoJavascript,IoLogoNodejs  } from "react-icons/io";
+import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { TbBrandTypescript } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
+import { motion } from "motion/react";
 const Banner = () => {
     const skills = [
         { name: "JavaScript", icon: <IoLogoJavascript size={32} /> },
         { name: "React.js", icon: <FaReact size={32} /> },
         { name: "Next.js", icon: <RiNextjsLine size={32} /> },
         { name: "TypeScript", icon: <TbBrandTypescript size={32} /> },
-        { name: "Node.js", icon: <IoLogoNodejs  size={32} /> },
+        { name: "Node.js", icon: <IoLogoNodejs size={32} /> },
         { name: "Express.js", icon: <SiExpress size={32} /> },
         { name: "MongoDB", icon: <Database size={32} /> },
     ];
@@ -30,7 +26,13 @@ const Banner = () => {
             <div className="custom-container flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12">
 
                 {/* Left Side (Text) */}
-                <div className="flex-1 text-center md:text-left space-y-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+
+                    className="flex-1 text-center md:text-left space-y-4">
                     <p className="text-sm font-bold tracking-wider syne sm:text-base text-gray-300 dark:text-gray-300 flex gap-2 justify-center md:justify-start">Hello, I'm <Hand className='text-yellow-500' /></p>
                     <h1 className="text-3xl sm:text-4xl md:text-6xl syne font-bold leading-[70px] text-white dark:text-white">
                         Md Shamiul Islam
@@ -55,16 +57,21 @@ const Banner = () => {
                                 <div className="p-2 cursor-pointer rounded-xl bg-gray-100 dark:bg-gray-800 hover:scale-105 transition">
                                     {skill.icon}
                                 </div>
-                               
+
                             </div>
                         ))}
                     </div> <div>
 
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Side (Image) */}
-                <div className="flex-1 relative   ">
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="flex-1 relative   ">
                     <Image
                         src="https://i.postimg.cc/sDLX8kdk/profile-1.png"
                         width={400}
@@ -75,7 +82,7 @@ const Banner = () => {
                     />
 
                     <div className='absolute w-[250px] h-[250px]  md:w-[400px]  md:h-[400px]  bg-yellow-600/30 rounded-full top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  blur-3xl z-[-1] '></div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )

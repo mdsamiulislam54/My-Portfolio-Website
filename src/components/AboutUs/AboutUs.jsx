@@ -15,7 +15,7 @@ const AboutUs = () => {
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        viewport={{ once: false,amount: 0.3 }}
+                        viewport={{ once: true,amount: 0.3 }}
                         className="relative">
                         <Image
                             src="https://i.postimg.cc/PfYSr7qW/AboutUs.png"
@@ -37,7 +37,7 @@ const AboutUs = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: false, amount:0.3 }}
+                    viewport={{ once: true, amount:0.3 }}
                     className="flex-1 text-center md:text-left space-y-5">
                     <h2 className="text-xl font-bold text-yellow-500 tracking-wider uppercase">
                         Get to Know Me
