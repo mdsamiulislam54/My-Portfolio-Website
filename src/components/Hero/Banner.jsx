@@ -22,13 +22,13 @@ const Banner = () => {
         { name: "MongoDB", icon: <Database size={32} /> },
     ];
     return (
-        <section className="min-h-screen flex justify-center items-center px-4 mt-16 ">
-            <div className="custom-container flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12">
+        <section className="min-h-screen flex justify-center items-center px-4  ">
+            <div className="custom-container flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 overflow-hidden">
 
                 {/* Left Side (Text) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -200 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true, amount: 0.3 }}
 
@@ -47,7 +47,7 @@ const Banner = () => {
                     </p>
 
                     <div className='syne flex gap-5 items-center max-md:justify-center my-4'>
-                        <Button variant="outline">Let's Talk <ArrowUpRight /></Button>
+                        <Button variant="outline" className='button'>Let's Talk <ArrowUpRight /></Button>
                         <Button variant="outline">My Work <ArrowUpRight /></Button>
                     </div>
 
@@ -67,15 +67,15 @@ const Banner = () => {
 
                 {/* Right Side (Image) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: 200 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true, amount: 0.3 }}
                     className="flex-1 relative   ">
                     <Image
                         src="https://i.postimg.cc/sDLX8kdk/profile-1.png"
-                        width={400}
-                        height={400}
+                        width={600}
+                        height={600}
                         alt="profile image"
 
                         className=" w-72 h-72 md:w-[600px] md:h-[600px] object-cover  "

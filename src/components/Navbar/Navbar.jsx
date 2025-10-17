@@ -6,6 +6,7 @@ import MenuIteam from './MenuIteam'
 import { AnimatePresence, motion } from "motion/react"
 import Logo from '../Logo/logo'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -43,14 +44,12 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`py-4   absolute inset-0 bg-transparent
-      ${pathname === '/' ? scrollY > 50 ? "fixed-nav bg-gradient-to-bl to-gray-800 from-black" : "" : scrollY > 50 ? "fixed-nav bg-white" : "bg-white"}
-    `}>
+    <nav className={`py-4  bg-gradient-to-bl to-gray-800 from-black ${scrollY > 50 && "fixed-nav  bg-gradient-to-bl to-gray-800 from-black "}`}>
       <div className="custom-container ">
         <div className='flex justify-between items-center'>
-          <div>
+          <Link href={'/'}>
             <Logo className={''} />
-          </div>
+          </Link>
           <div className='flex items-center gap-4'>
             
             <Button variant="outline"  onClick={() => alert("Resume Downloaded!")}>

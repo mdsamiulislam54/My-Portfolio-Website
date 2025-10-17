@@ -3,20 +3,19 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
-import { Button } from "../ui/button";
-
+import { Button } from "@/components/ui/button";
 const AboutUs = () => {
     return (
-        <section className="py-16">
+        <section className="py-16 min-h-screen">
             <div className="custom-container mx-auto flex flex-col md:flex-row justify-between items-center gap-10 px-4">
 
                 {/* Left Side (Image Section) */}
                 <div className="relative flex-1 flex justify-center items-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 100 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        viewport={{ once: true,amount: 0.3 }}
+                        viewport={{ once: false,}}
                         className="relative">
                         <Image
                             src="https://i.postimg.cc/PfYSr7qW/AboutUs.png"
@@ -35,10 +34,10 @@ const AboutUs = () => {
 
                 {/* Right Side (Text Section) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true, amount:0.3 }}
+                    viewport={{ once: false,}}
                     className="flex-1 text-center md:text-left space-y-5">
                     <h2 className="text-xl font-bold text-yellow-500 tracking-wider uppercase">
                         Get to Know Me

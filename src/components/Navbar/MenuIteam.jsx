@@ -17,11 +17,11 @@ const MenuIteam = ({onClose}) => {
       <ul className="flex flex-col gap-8 syne">
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Home size={18} />
-          <Link href={"#"}>Home</Link>
+          <Link href={"/"}>Home</Link>
         </li>
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <User size={18} />
-          <Link href={"#"}>About Us</Link>
+          <Link href={"/aboutUs"}>About Us</Link>
         </li>
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Briefcase size={18} />

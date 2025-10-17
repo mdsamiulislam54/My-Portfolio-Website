@@ -12,6 +12,7 @@ html {
   }
 }
 
+
 .geist{
   font-family: "Geist", sans-serif;
 }
@@ -40,3 +41,33 @@ html {
   }
 }
 
+
+.button{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid grey;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(244, 197, 25, 0.573), transparent) ;
+  z-index: -1;
+}
+
+.button:hover::before{
+  animation: swipe 2s linear infinite;
+}
+
+@keyframes swipe {
+  to{
+    left:100%
+  }
+}
