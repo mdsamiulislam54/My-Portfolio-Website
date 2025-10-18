@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const AboutUs = () => {
     return (
-        <section className="py-16">
+        <section className="py-16 overflow-x-hidden">
             <div className="custom-container mx-auto flex flex-col md:flex-row justify-between items-center gap-10 px-4">
 
                 {/* Left Side (Image Section) */}
@@ -70,7 +70,7 @@ const AboutUs = () => {
                     </article>
 
                     <div className="flex justify-end mt-4">
-                        <Button variant="outline">Let's Talk <ArrowUpRight /></Button>
+                        <Button variant="outline z-[10]">Let's Talk <ArrowUpRight /></Button>
                     </div>
                 </motion.div>
             </div>

@@ -1,5 +1,6 @@
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Banner from "@/components/Hero/Banner";
+import Skills from "@/components/Skills/Skills";
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
       </section>
       <section className="py-16">
         <AboutUs/>
+      </section>
+      <section>
+        <Skills/>
       </section>
     </div>
   );

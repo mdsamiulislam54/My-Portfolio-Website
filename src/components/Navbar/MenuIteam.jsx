@@ -5,15 +5,15 @@ import { Button } from '../ui/button'
 import { X } from 'lucide-react'
 import Logo from '../Logo/logo'
 
-const MenuIteam = ({onClose}) => {
+const MenuIteam = ({ onClose }) => {
   return (
     <div className="mt-2 p-6">
-        <div className='flex justify-between items-center my-10'>
-           <Logo/>
-            <Button variant="outline" >
-              <X/>
-            </Button>
-        </div>
+      <div className='flex justify-between items-center my-10'>
+        <Logo />
+        <Button variant="outline" >
+          <X />
+        </Button>
+      </div>
       <ul className="flex flex-col gap-8 syne">
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Home size={18} />
@@ -24,6 +24,10 @@ const MenuIteam = ({onClose}) => {
           <Link href={"/aboutUs"}>About Us</Link>
         </li>
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
+          <Code size={18} />
+          <Link href={"/skills"}>Skill</Link>
+        </li>
+        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Briefcase size={18} />
           <Link href={"#"}>Projects</Link>
         </li>
@@ -31,10 +35,7 @@ const MenuIteam = ({onClose}) => {
           <Book size={18} />
           <Link href={"#"}>Education</Link>
         </li>
-        <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
-          <Code size={18} />
-          <Link href={"#"}>Skill</Link>
-        </li>
+
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Mail size={18} />
           <Link href={"#"}>Contact Us</Link>

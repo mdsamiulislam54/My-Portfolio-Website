@@ -44,7 +44,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`py-4  bg-gradient-to-bl to-gray-800 from-black ${scrollY > 50 && "fixed-nav  bg-gradient-to-bl to-gray-800 from-black "}`}>
+    <nav className={`py-4  bg-gradient-to-bl to-gray-800 from-black  ${scrollY > 50 && "fixed-nav  bg-gradient-to-bl to-gray-800 from-black scroll-smooth"}`}>
       <div className="custom-container ">
         <div className='flex justify-between items-center'>
           <Link href={'/'}>
@@ -63,12 +63,12 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ x: 600, }}
-              exit={{ x: 600, }}
+              initial={{ x: 500, }}
+              exit={{ x: 500, }}
               animate={{ x: 0, opacity: 1 }}
 
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className='fixed right-0 top-0 min-h-screen z-100 bg-gradient-to-tl to-black from-gray-800  shadow-2xl  p-4 lg:w-3/12 md:w-5/12 sm:w-7/12 w-10/12'
+              className='fixed right-0 top-0 min-h-screen z-[100] bg-gradient-to-tl to-black from-gray-800  shadow-2xl  p-4 lg:w-3/12 md:w-5/12 sm:w-7/12 w-10/12 overflow-hidden'
             >
               <MenuIteam onClose={handleToggleMenu} />
             </motion.div>
