@@ -4,22 +4,21 @@ import React from 'react'
 import { Button } from '../ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import { Hand } from 'lucide-react'
-import { Database } from "lucide-react";
-import { RiNextjsLine } from "react-icons/ri";
-import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
-import { TbBrandTypescript } from "react-icons/tb";
-import { SiExpress } from "react-icons/si";
+import { FaLinkedin, FaGithub, FaFacebook, FaDiscord } from "react-icons/fa";
 import { motion } from "motion/react";
+import Link from 'next/link'
+
 const Banner = () => {
-    const skills = [
-        { name: "JavaScript", icon: <IoLogoJavascript size={32} /> },
-        { name: "React.js", icon: <FaReact size={32} /> },
-        { name: "Next.js", icon: <RiNextjsLine size={32} /> },
-        { name: "TypeScript", icon: <TbBrandTypescript size={32} /> },
-        { name: "Node.js", icon: <IoLogoNodejs size={32} /> },
-        { name: "Express.js", icon: <SiExpress size={32} /> },
-        { name: "MongoDB", icon: <Database size={32} /> },
+    const socials = [
+        {
+            name: "LinkedIn",
+            icon: <FaLinkedin size={32} className="" />,
+            link:"https://www.linkedin.com/in/mdshamiulislam-dev/"
+
+        },
+        { name: "GitHub", icon: <FaGithub size={32} className="text-gray-300" />, link:"https://github.com/mdsamiulislam54" },
+        { name: "Facebook", icon: <FaFacebook size={32} className="text-gray-100" />, link:"https://www.facebook.com/mdsamiulislam2004" },
+        { name: "Discord", icon: <FaDiscord size={32} className="" />, link:"https://discord.com/users/1310831175677382697" },
     ];
     return (
         <section className="min-h-screen flex justify-center items-center px-4  ">
@@ -52,11 +51,11 @@ const Banner = () => {
                     </div>
 
                     <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-6 text-center py-10">
-                        {skills.map((skill, index) => (
+                        {socials.map((social, index) => (
                             <div key={index} className="flex flex-col items-center">
-                                <div className="p-2 cursor-pointer rounded-xl bg-gray-100 dark:bg-gray-800 hover:scale-105 transition">
-                                    {skill.icon}
-                                </div>
+                                <Link href={social.link} target='_blank' className="p-2 cursor-pointer rounded-xl bg-gray-100 dark:bg-gray-800 hover:scale-105 transition hover:-rotate-3 button">
+                                    {social.icon}
+                                </Link>
 
                             </div>
                         ))}
