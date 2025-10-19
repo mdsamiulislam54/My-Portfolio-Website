@@ -29,7 +29,7 @@ const MenuIteam = ({ onClose }) => {
         </li>
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Briefcase size={18} />
-          <Link href={"#"}>Projects</Link>
+          <Link href={"/projects"}>Projects</Link>
         </li>
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Book size={18} />

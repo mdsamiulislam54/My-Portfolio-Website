@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const Skills = () => {
     return (
         <section className="py-16 bg-black text-white scroll-smooth">
-            <div className="custom-container text-center mx-auto">
+            <div className="custom-container  mx-auto">
                 <h2 className="text-3xl md:text-5xl font-bold syne tracking-wide mb-8 text-yellow-500">
                     Skills
                 </h2>

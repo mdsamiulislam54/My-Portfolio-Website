@@ -1,5 +1,6 @@
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Banner from "@/components/Hero/Banner";
+import Projects from "@/components/Projects/Projects";
 import Skills from "@/components/Skills/Skills";
 
 export default function Home() {
@@ -13,6 +14,9 @@ export default function Home() {
       </section>
       <section>
         <Skills/>
+      </section>
+      <section className="py-16">
+        <Projects/>
       </section>
     </div>
   );
