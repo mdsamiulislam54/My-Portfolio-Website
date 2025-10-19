@@ -5,11 +5,9 @@ import { motion } from "motion/react";
 
 const Skills = () => {
     return (
-        <section className="py-16 bg-black text-white scroll-smooth min-h-screen">
+        <section className="py-16  text-white scroll-smooth min-h-screen">
             <div className="custom-container text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold syne tracking-wide mb-8 text-yellow-500">
-                    Skills
-                </h2>
+           
 
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -39,7 +37,7 @@ const Skills = () => {
                 p-6 
                 shadow-md 
                 hover:shadow-yellow-500/30 
-                hover:rotate-[-10deg]
+                hover:rotate-[-2deg]
                cursor-pointer
                 transition 
                 duration-300 

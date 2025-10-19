@@ -5,15 +5,13 @@ import ContactImages from '../../media/Mobile user-pana.svg'
 import { MailOpen } from 'lucide-react'
 import { SiWhatsapp } from 'react-icons/si'
 import { SendHorizontal } from 'lucide-react'
-import ContactForm from './ContactForm'
+import ContactForm from '@/components/ContactUs/ContactForm'
 import { motion } from "motion/react";
 const ContactUs = () => {
     return (
-        <div id='#contact'>
+        <div className=' py-16'>
             <div className="custom-container">
-                <h2 className="text-3xl md:text-5xl font-bold syne tracking-wide mb-8 text-yellow-500">
-                    Contact Us
-                </h2>
+
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}

@@ -25,9 +25,9 @@ const Scroll = () => {
   return (
     <div
       onClick={handleScroll}
-      className="fixed top-[50%] right-5 cursor-pointer animate-pulse bg-gray-800 text-white p-2 rounded-full shadow-lg hover:scale-110 transition"
+      className="fixed top-[50%] sm:right-5 right-2 cursor-pointer animate-pulse bg-gray-800 text-white p-2 rounded-full shadow-lg hover:scale-110 transition"
     >
-      <Mouse size={28} />
+      <Mouse size={20}/>
     </div>
   );
 };

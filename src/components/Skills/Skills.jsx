@@ -40,7 +40,7 @@ const Skills = () => {
                 p-6 
                 shadow-md 
                 hover:shadow-yellow-500/30 
-                hover:rotate-[-10deg]
+                hover:rotate-[-2deg]
                cursor-pointer
                 transition 
                 duration-300 

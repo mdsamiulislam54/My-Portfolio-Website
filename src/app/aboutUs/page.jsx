@@ -12,8 +12,8 @@ const AboutUs = () => {
                 {/* Left Side (Image Section) */}
                 <div className="relative flex-1 flex justify-center items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -100 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: false,}}
                         className="relative">
@@ -34,8 +34,8 @@ const AboutUs = () => {
 
                 {/* Right Side (Text Section) */}
                 <motion.div
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: false,}}
                     className="flex-1 text-center md:text-left space-y-5">

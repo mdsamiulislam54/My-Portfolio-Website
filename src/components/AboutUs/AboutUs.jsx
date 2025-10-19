@@ -4,10 +4,11 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const AboutUs = () => {
     return (
-        <section className="py-16 overflow-x-hidden">
+        <section className=" overflow-x-hidden">
             <div className="custom-container mx-auto flex flex-col md:flex-row justify-between items-center gap-10 px-4">
 
                 {/* Left Side (Image Section) */}
@@ -69,9 +70,9 @@ const AboutUs = () => {
                         </p>
                     </article>
 
-                    <div className="flex justify-end mt-4">
-                        <Button variant="outline z-[10]">Let's Talk <ArrowUpRight /></Button>
-                    </div>
+                    <Link href={'/contact'} className="flex justify-end mt-4">
+                        <Button variant="outline" >Let's Talk <ArrowUpRight /></Button>
+                    </Link>
                 </motion.div>
             </div>
         </section>

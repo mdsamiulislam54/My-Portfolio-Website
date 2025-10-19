@@ -10,7 +10,7 @@ const MenuIteam = ({ onClose }) => {
     <div className="mt-2 p-6">
       <div className='flex justify-between items-center my-10'>
         <Logo />
-        <Button variant="outline" >
+        <Button variant="outline" onClick={onClose} >
           <X />
         </Button>
       </div>
@@ -38,11 +38,11 @@ const MenuIteam = ({ onClose }) => {
 
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Mail size={18} />
-          <Link href={"#"}>Contact Us</Link>
+          <Link href={"/contact"}>Contact Us</Link>
         </li>
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <FileText size={18} />
-          <Link href={"#"}>My Blogs</Link>
+          <Link href={"/blogs"}>My Blogs</Link>
         </li>
       </ul>
     </div>

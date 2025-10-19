@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { GraduationCap } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-
+import { motion } from "motion/react";
 export default function EducationCards() {
     const cards = [
         {
@@ -16,7 +16,7 @@ export default function EducationCards() {
                 "Completed Diploma in Computer Technology with a focus on software development, data structures, and computer networks. Graduated with practical project experience and strong problem-solving skills.",
             cta: "View Certificate",
             icon: "/icons/education.svg",
-            certificate:"https://drive.google.com/file/d/1gHSuX_rQdqBMjkfLtPOHD8vf8-aV1l4C/view?usp=sharing"
+            certificate: "https://drive.google.com/file/d/1gHSuX_rQdqBMjkfLtPOHD8vf8-aV1l4C/view?usp=sharing"
         },
         {
             id: 2,
@@ -27,7 +27,7 @@ export default function EducationCards() {
             description: "Completed the Complete Web Development course by Programming Hero, focusing on real-world web design and development skills. Learned front-end technologies like HTML, CSS, Tailwind CSS, JavaScript, and React.js. Built multiple responsive projects and improved hands-on problem-solving abilities.",
             cta: "View Certificate",
             icon: "/icons/course.svg",
-            certificate:"https://drive.google.com/file/d/1QMt2bEjYe19AGWMi8iDtc-lTnBedQ4Bz/view?usp=sharing"
+            certificate: "https://drive.google.com/file/d/1QMt2bEjYe19AGWMi8iDtc-lTnBedQ4Bz/view?usp=sharing"
         },
         {
             id: 3,
@@ -39,15 +39,20 @@ export default function EducationCards() {
                 "Hands-on industrial training focused on real-world web design and development workflows. Participated in end-to-end project cycles: design, implementation, testing, and deployment.",
             cta: "View Certificate",
             icon: "/icons/training.svg",
-            certificate:""
+            certificate: ""
         },
     ];
 
     return (
-        <section className=" custom-container py-10">
-            <h3 className="text-3xl font-semibold mb-8 t">Education & Training</h3>
+        <section className=" custom-container py-16">
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {cards.map((card) => (
                     <article
                         key={card.id}
@@ -56,7 +61,7 @@ export default function EducationCards() {
                         {/* Icon */}
                         <div className="mb-4 flex items-center justify-center">
                             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-700">
-                                <GraduationCap color="gold"/>
+                                <GraduationCap color="gold" />
                             </div>
                         </div>
 
@@ -86,7 +91,7 @@ export default function EducationCards() {
                         </Button>
                     </article>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 }

@@ -2,6 +2,8 @@
 import Scroll from "@/components/Scroll/Scroll";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import ToastProvider from "@/components/Provider/ToastProvider";
+import Footer from "@/components/Footer/Footer";
 
 
 
@@ -18,10 +20,12 @@ export default function RootLayout({ children }) {
       >
 
         <Navbar />
-        <main>
+        <main className="min-h-screen">
           {children}
           <Scroll/>
+          <ToastProvider/>
         </main>
+        <Footer/>
 
       </body>
     </html>

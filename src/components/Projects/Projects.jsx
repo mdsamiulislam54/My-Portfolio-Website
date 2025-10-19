@@ -6,7 +6,7 @@ import React from 'react'
 import { Button } from '../ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import { motion } from "motion/react";
+
 const Projects = () => {
   return (
     <div>
@@ -14,11 +14,8 @@ const Projects = () => {
         <h2 className="text-3xl md:text-5xl font-bold syne tracking-wide mb-8 text-yellow-500">
           Projects
         </h2>
-        <motion.div className="py-12 space-y-30"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.3 }}
+        <div className="py-12 space-y-30"
+          
 
         >
           {projects.map((project, index) => (
@@ -86,7 +83,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         <div className='flex justify-center items-center my-4'>
           <Button className='button'>

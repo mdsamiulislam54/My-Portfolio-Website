@@ -51,10 +51,12 @@ const Navbar = () => {
             <Logo className={''} />
           </Link>
           <div className='flex items-center gap-4'>
-            
-            <Button variant="outline"  onClick={() => alert("Resume Downloaded!")}>
-              Resume
-            </Button>
+
+            <Link href={"https://drive.google.com/file/d/1i68eoEhG9hVO51ngDR8QLT3wGUmf5I_J/view?usp=sharing"} target='_blank'>
+              <Button variant="outline">
+                Resume
+              </Button>
+            </Link>
             <Button variant="outline" ref={menuRef} onClick={handleToggleMenu} className={"cursor-pointer"}>
               <MenuIcon />
             </Button>

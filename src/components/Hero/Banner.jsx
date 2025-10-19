@@ -12,13 +12,13 @@ const Banner = () => {
     const socials = [
         {
             name: "LinkedIn",
-            icon: <FaLinkedin size={32} className="" />,
-            link:"https://www.linkedin.com/in/mdshamiulislam-dev/"
+            icon: <FaLinkedin size={25} className="" />,
+            link: "https://www.linkedin.com/in/mdshamiulislam-dev/"
 
         },
-        { name: "GitHub", icon: <FaGithub size={32} className="text-gray-300" />, link:"https://github.com/mdsamiulislam54" },
-        { name: "Facebook", icon: <FaFacebook size={32} className="text-gray-100" />, link:"https://www.facebook.com/mdsamiulislam2004" },
-        { name: "Discord", icon: <FaDiscord size={32} className="" />, link:"https://discord.com/users/1310831175677382697" },
+        { name: "GitHub", icon: <FaGithub size={25} className="text-gray-300" />, link: "https://github.com/mdsamiulislam54" },
+        { name: "Facebook", icon: <FaFacebook size={25} className="text-gray-100" />, link: "https://www.facebook.com/mdsamiulislam2004" },
+        { name: "Discord", icon: <FaDiscord size={25} className="" />, link: "https://discord.com/users/1310831175677382697" },
     ];
     return (
         <section className="min-h-screen flex justify-center items-center px-4  ">
@@ -46,8 +46,12 @@ const Banner = () => {
                     </p>
 
                     <div className='syne flex gap-5 items-center max-md:justify-center my-4'>
-                        <Button variant="outline" className='button'>Let's Talk <ArrowUpRight /></Button>
-                        <Button variant="outline">My Work <ArrowUpRight /></Button>
+                        <Link href={'/contact'}>
+                            <Button variant="outline" className='button'>Let's Talk <ArrowUpRight /></Button>
+                        </Link>
+                        <Link href={'/projects'}>
+                            <Button variant="outline">My Work <ArrowUpRight /></Button>
+                        </Link>
                     </div>
 
                     <div className=" flex max-sm:justify-center gap-4 py-10">

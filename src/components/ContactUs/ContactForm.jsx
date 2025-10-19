@@ -1,20 +1,27 @@
-
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { toast } from 'react-toastify'
 
 const ContactForm = () => {
+    const [error, setError] = useState('')
 
     const onSubmit = (e) => {
+        
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
         const subject = form.subject.value;
         const description = form.description.value;
-        if(!name || !email || subject || description){
-            return 
+        if (!name || !email || !subject || !description) {
+            return toast.error("Please fill all required fields.")
+
+        } else {
+            toast.success(`${name} Form submitted successfully  🎉`)
+            form.reset()
         }
 
     }
@@ -38,7 +45,9 @@ const ContactForm = () => {
                 <Label>Subject</Label>
                 <textarea type="text" rows={6} name="description" placeholder="Enter Your Email" className="border p-4 border-yellow-500 w-full" />
             </div>
-
+            {
+                error && <p className='text-yellow-500'>{error}</p>
+            }
 
             <Button type="submit " className="button">Submit</Button>
         </form>

@@ -8,14 +8,16 @@ import Link from 'next/link'
 import { motion } from "motion/react";
 const Projects = () => {
     return (
-        <div>
-            <div className="custom-container">
+        <div className='py-16'>
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: false, }}
+                className="custom-container">
 
-                <motion.div className="py-12 space-y-30"
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                    viewport={{ once: true, amount: 0.3 }}
+                <div className=" space-y-30"
+
 
                 >
                     {projects.map((project, index) => (
@@ -83,10 +85,10 @@ const Projects = () => {
                             </div>
                         </div>
                     ))}
-                </motion.div>
+                </div>
 
 
-            </div>
+            </motion.div>
         </div>
     )
 }
