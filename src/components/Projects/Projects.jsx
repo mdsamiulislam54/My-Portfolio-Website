@@ -15,7 +15,7 @@ const Projects = () => {
           Projects
         </h2>
         <motion.div className="py-12 space-y-30"
-          nitial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
@@ -24,7 +24,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`flex flex-col lg:flex-row  gap-8 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              className={`flex flex-col lg:flex-row    gap-8 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
             >
               {/* Image Section */}
@@ -39,7 +39,7 @@ const Projects = () => {
               </div>
 
               {/* Content Section */}
-              <div className="lg:w-1/2 space-y-3 syne">
+              <div className="lg:w-1/2 space-y-3 syne ">
                 <h2 className="text-2xl font-semibold">{project.projectName}</h2>
                 <p className="text-gray-100 tracking-wide text-md">{project.overview}</p>
 

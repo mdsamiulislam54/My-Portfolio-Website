@@ -1,7 +1,8 @@
 
-import { Mouse } from "lucide-react";
+import Scroll from "@/components/Scroll/Scroll";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+
 
 
 export const metadata = {
@@ -19,9 +20,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>
           {children}
-          <div className="fixed top-[50%] right-5 cursor-pointer animate-pulse">
-            <Mouse size={30} />
-          </div>
+          <Scroll/>
         </main>
 
       </body>

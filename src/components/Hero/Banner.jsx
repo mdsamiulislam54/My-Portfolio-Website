@@ -50,7 +50,7 @@ const Banner = () => {
                         <Button variant="outline">My Work <ArrowUpRight /></Button>
                     </div>
 
-                    <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-6 text-center py-10">
+                    <div className=" flex max-sm:justify-center gap-4 py-10">
                         {socials.map((social, index) => (
                             <div key={index} className="flex flex-col items-center">
                                 <Link href={social.link} target='_blank' className="p-2 cursor-pointer rounded-xl bg-gray-100 dark:bg-gray-800 hover:scale-105 transition hover:-rotate-3 button">

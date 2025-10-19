@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 import { Home, User, Briefcase, Book, Code, Mail, FileText } from 'lucide-react'
-import { Button } from '../ui/button'
 import { X } from 'lucide-react'
 import Logo from '../Logo/logo'
+import { Button } from '../ui/button'
 
 const MenuIteam = ({ onClose }) => {
   return (
@@ -33,7 +33,7 @@ const MenuIteam = ({ onClose }) => {
         </li>
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">
           <Book size={18} />
-          <Link href={"#"}>Education</Link>
+          <Link href={"/education"}>Education</Link>
         </li>
 
         <li className="flex items-center gap-4 text-xl font-bold tracking-wider leading-8">

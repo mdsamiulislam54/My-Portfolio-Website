@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const Skills = () => {
     return (
-        <section className="py-16 bg-black text-white scroll-smooth">
+        <section className="py-16  text-white scroll-smooth">
             <div className="custom-container  mx-auto">
                 <h2 className="text-3xl md:text-5xl font-bold syne tracking-wide mb-8 text-yellow-500">
                     Skills
@@ -23,6 +23,7 @@ const Skills = () => {
             md:grid-cols-4 
             gap-8
             mx-auto
+           
           "
                 >
                     {skillsData.map((skill) => (
@@ -34,7 +35,7 @@ const Skills = () => {
                 flex-col 
                 items-center 
                 justify-center 
-                bg-gray-900 
+                 bg-gradient-to-bl to-gray-800
                 rounded-2xl 
                 p-6 
                 shadow-md 
