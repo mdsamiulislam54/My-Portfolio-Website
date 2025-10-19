@@ -17,7 +17,7 @@ const Footer = () => {
     ];
     return (
         <footer className="bg-gradient-to-bl to-gray-800 from-black border-t border-gray-700 text-white ">
-            <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center py-2">
                 {/* Left */}
                 <div className="text-center md:text-left mb-4 md:mb-0">
                     <h1 className="text-xl font-bold">Md. Shamiul Islam</h1>
